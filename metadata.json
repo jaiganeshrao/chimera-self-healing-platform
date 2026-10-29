@@ -1,0 +1,6 @@
+{
+  "name": "Project Chimera: AI-Powered Self-Healing Software System",
+  "description": "An intelligent software reliability platform that monitors services, detects failures, analyzes root causes using AI/ML, executes safe recovery actions, and verifies self-healing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

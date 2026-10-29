@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  chimera-platform:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    volumes:
+      - chimera-data:/app/data
+    restart: unless-stopped
+
+  postgres-db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: chimera_user
+      POSTGRES_PASSWORD: chimera_password
+      POSTGRES_DB: chimera_reliability
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  chimera-data:
+  postgres-data:
